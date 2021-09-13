@@ -1,0 +1,8 @@
+<h1>Voçê tem a certeza que quer eliminar a bebida #{{ beverage.id }}, de nome {{ beverage.designation }}, do fornecedor
+    {{ beverage.supplier }}?</h1>
+<h1 style="color: red">Se o fizer, a mudança será permanente. Ficará sem a sua bebida!</h1>
+
+<button type="button"
+    onclick="location.href = '/DEIParty_app/remove_beverage/{{ beverage.id }}/confirm_removal'">Eliminar a
+    bebida</button>
+<button type="button" onclick="alert('Hello world!')">Voltar atrás</button>

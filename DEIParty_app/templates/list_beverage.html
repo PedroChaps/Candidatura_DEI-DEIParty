@@ -1,0 +1,17 @@
+<html>
+<h1> Bebida #{{ beverage.id }} - {{ beverage.designation }} </h1>
+<p> Esta é a página pessoal da bebida {{ beverage.designation }}. </p>
+
+<p> > O seu id é #{{ beverage.id }};</p>
+
+{% if beverage.amountInStock == 0 %}
+<p> > já não existem unidades em stock; </p>
+{% elif beverage.amountInStock == 1 %}
+<p> > apenas existe 1 unidade em stock; </p>
+{% else %}
+<p> > ainda existem {{ beverage.amountInStock }} unidades em stock;</p>
+{% endif %}
+<p> > O fornecedor desta bebida é {{ beverage.supplier }}.</p>
+<img src="{{ beverage.imageUrl }}" alt="{{ beverage.designation }}">
+
+</html>

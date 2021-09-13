@@ -1,0 +1,31 @@
+<html>
+<h1> Bebidas disponiveis </h1>
+<p> Tabela com todas as bebidas disponiveis: </p>
+
+<table class="table table-striped">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">designação</th>
+            <th scope="col">quantidade</th>
+            <th scope="col">fornecedor</th>
+            <th scope="col">imagem</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for b in beverages %}
+        <tr>
+            <td>{{ b.id }}</td>
+            <td>{{ b.designation }}</td>
+            <td>{{ b.amountInStock }}</td>
+            <td>{{ b.supplier }}</td>
+            <td><img src="{{ b.imageUrl }}" alt="{{ b.designation }}"></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+
+</html>

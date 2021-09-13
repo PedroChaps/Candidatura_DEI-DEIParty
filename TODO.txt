@@ -1,0 +1,11 @@
+[ ] - mudar tamanho das imagens em list_all_beverages.html
+[ ] - mudar para uma tabela bonita
+[ ] - warn_user.html > voltar para a página principal
+#--------------------------------------------
+
+
+[X] - Uma página que lista todas as bebidas devolvidos pela API numa tabela. A cada entrada da tabela está associada uma bebida e as colunas devem corresponder ao id, designação, quantidade disponível e imagem devolvida pela Partystore.
+[X] - A página pessoal de cada bebida que deve conter o id, designação, quantidade disponível, fornecedor e imagem da bebida.
+[ ] - Uma página com um formulário capaz de adicionar novas bebidas através da API fornecida.
+[ ] - Capacidade de aumentar/diminuir a quantidade disponível de uma bebida através da API fornecida.
+[~] - Capacidade de remover uma bebida através da API fornecida.
