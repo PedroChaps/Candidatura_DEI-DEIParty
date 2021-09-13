@@ -1,0 +1,2 @@
+[ ] - mudar tamanho das imagens em list_all_beverages.html
+[ ] - mudar para uma tabela bonita
