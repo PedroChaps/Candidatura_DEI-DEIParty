@@ -1,0 +1,107 @@
+<h1> Bem vindo ao website DEIParty! </h1>
+<h2> Você tem as seguintes opções: </h2>
+
+
+<script language="javascript" type="text/javascript">
+    function listAllBeverages() {
+        var input = document.getElementById("all_bev").value.split(", ")
+        var url
+        if (input.length != 2 || isNaN(input[0]) || isNaN(input[1])) {
+            url = "error/";
+        }
+        else {
+            url = "beverages/" + input[0] + "/" + input[1];
+        }
+        window.location = url;
+    }
+
+    function listBeverage() {
+        var input = document.getElementById("info_bev").value
+        var url
+
+        if (isNaN(input)) {
+            url = "error/";
+        }
+        else {
+            url = "beverage/" + input + "/";
+        }
+        window.location = url;
+    }
+
+    function changeQuantity() {
+        var input = document.getElementById("change_bev").value.split(", ")
+        var url
+        if (input.length != 2 || isNaN(input[0]) || isNaN(input[1])) {
+            url = "error/";
+        }
+        else {
+            url = "update_beverage/" + input[0] + "/" + input[1];
+        }
+        window.location = url;
+    }
+
+    function removeBeverage() {
+        var input = document.getElementById("remove_bev").value
+        var url
+        if (isNaN(input)) {
+            url = "error/";
+        }
+        else {
+            url = "remove_beverage/" + input;
+        }
+        window.location = url;
+    }
+</script>
+
+
+
+<body>
+
+    <br>
+    <h3>Listar todas as bebidas</h3>
+    <p>Insira o limite e o offset, no formato: "limite, offset" </p>
+
+    <form>
+        URL: <input type="text" id="all_bev" name="all_bev" value="" placeholder="10, 1" required><br>
+        <input type="button" value="click" OnClick="listAllBeverages()" />
+    </form>
+    <br>
+
+
+    <h3>Listar a página pessoal de uma bebida</h3>
+    <p>Insira o id da bebida </p>
+
+    <form>
+        URL: <input type="text" id="info_bev" name="info_bev" value="" placeholder="3" required><br>
+        <input type="button" value="click" OnClick="listBeverage()" />
+    </form>
+    <br>
+
+
+    <h3>Criar uma nova bebida</h3>
+    <p style="color: brown;"> WIP </p>
+    <br>
+
+    <h3>Alterar a quantidade de uma bebida</h3>
+    <p>Insira o id e a nova quantidade da bebida, no formato: "id, nova_quantidade"</p>
+
+    <form>
+        URL: <input type="text" id="change_bev" name="change_bev" value="" placeholder="3, 15" required><br>
+        <input type="button" value="click" OnClick="changeQuantity()" />
+    </form>
+    <p style="color: brown;"> This is very broken </p>
+    <br>
+
+
+    <h3>Remover uma bebida</h3>
+    <p>Insira o id da bebida</p>
+
+    <form>
+        URL: <input type="text" id="remove_bev" name="remove_bev" value="" placeholder="3" required><br>
+        <input type="button" value="click" OnClick="removeBeverage()" />
+    </form>
+    <br>
+
+
+
+</body>
